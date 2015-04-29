@@ -4,7 +4,8 @@ Priority: optional
 Maintainer: Johannes Lehtinen <johannes.lehtinen@iki.fi>
 Uploaders: Balint Reczey <balint@balintreczey.hu>
 Standards-Version: 3.7.2
-Build-Depends: debhelper (>= 9), libexpat1-dev, libreadline6-dev
+Build-Depends: debhelper (>= 9), libexpat1-dev, libreadline6-dev,
+               dh-autoreconf
 
 Package: libcpluff0
 Section: libs
