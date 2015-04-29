@@ -4,12 +4,12 @@ Priority: optional
 Maintainer: Johannes Lehtinen <johannes.lehtinen@iki.fi>
 Uploaders: Balint Reczey <balint@balintreczey.hu>
 Standards-Version: 3.7.2
-Build-Depends: debhelper (>= 4.2.32), libexpat1-dev, libreadline6-dev
+Build-Depends: debhelper (>= 9), libexpat1-dev, libreadline6-dev
 
 Package: libcpluff0
 Section: libs
 Architecture: any
-Depends: ${shlibs:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, dh-autoreconf
 Description: C-Pluff, a plug-in framework for C - runtime library
  C-Pluff is a plug-in framework for C programs. It has been strongly
  inspired by the Java plug-in framework in Eclipse. C-Pluff focuses on
@@ -22,7 +22,7 @@ Description: C-Pluff, a plug-in framework for C - runtime library
 Package: cpluff-loader
 Section: utils
 Architecture: any
-Depends: ${shlibs:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: C-Pluff, a plug-in framework for C - development kit
  C-Pluff is a plug-in framework for C programs. It has been strongly
  inspired by the Java plug-in framework in Eclipse. C-Pluff focuses on
@@ -36,7 +36,8 @@ Description: C-Pluff, a plug-in framework for C - development kit
 Package: libcpluff0-dev
 Section: libdevel
 Architecture: any
-Depends: libcpluff0 (= ${Source-Version}), cpluff-loader, ${shlibs:Depends}
+Depends: libcpluff0 (= ${Source-Version}), cpluff-loader, ${shlibs:Depends},
+         ${misc:Depends}
 Provides: libcpluff-dev
 Conflicts: libcpluff-dev
 Description: C-Pluff, a plug-in framework for C - development kit
