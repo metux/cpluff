@@ -3,7 +3,7 @@ Section: devel
 Priority: optional
 Maintainer: Johannes Lehtinen <johannes.lehtinen@iki.fi>
 Uploaders: Balint Reczey <balint@balintreczey.hu>
-Standards-Version: 3.7.2
+Standards-Version: 3.9.6
 Build-Depends: debhelper (>= 9), libexpat1-dev, libreadline6-dev,
                dh-autoreconf
 
