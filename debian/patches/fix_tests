@@ -1,0 +1,29 @@
+--- a/test/Makefile.am
++++ b/test/Makefile.am
+@@ -17,7 +17,7 @@
+ CPPFLAGS = @CPPFLAGS@
+ CPPFLAGS += -DCP_HOST="\"$(host)\""
+ 
+-LIBS = @LIBS_OTHER@ @LIBS@
++LIBS = @LIBS_OTHER@ @LIBS@ -ldl
+ 
+ check_PROGRAMS = testsuite
+ 
+--- a/test/test-fatalerrordefault
++++ b/test/test-fatalerrordefault
+@@ -6,5 +6,5 @@
+ 
+ set -e
+ 
+-trap "" SIGABRT
++trap "" ABRT
+ ! ./testsuite fatalerrordefault 2> /dev/null
+--- a/test/test-fatalerrorreset
++++ b/test/test-fatalerrorreset
+@@ -6,5 +6,5 @@
+ 
+ set -e
+ 
+-trap "" SIGABRT
++trap "" ABRT
+ ! ./testsuite fatalerrorreset 2> /dev/null
