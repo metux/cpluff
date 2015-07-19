@@ -1,54 +1,65 @@
-This is a debianized package of C-Pluff, a plug-in framework for C
-programs. More information and original sources are available at:
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: C-Pluff
+Source: http://www.c-pluff.org/
 
-  http://www.c-pluff.org/
-  
-C-Pluff copyright and license are included below.
+Files: *
+Copyright: 2007, Johannes Lehtinen
+License: Expat
 
-C-Pluff includes data structure implementations from the Kazlib library.
-Kazlib copyright and license are included below.
+Files: auxliary/*
+Copyright: 1996-2006 Free Software Foundation
+License: GPL-2+
 
+Files: kazlib/*
+Copyright: 1997, Kaz Kylheku <kaz@ashi.footprints.net>
+License: Kazlib-Free-Software
 
-C-Pluff copyright and license
------------------------------
+License: Expat
+ The MIT License
+ .
+ Permission is hereby granted, free of charge, to any person
+ obtaining a copy of this software and associated
+ documentation files (the "Software"), to deal in the Software
+ without restriction, including without limitation the rights to
+ use, copy, modify, merge, publish, distribute, sublicense,
+ and/or sell copies of the Software, and to permit persons to
+ whom the Software is furnished to do so, subject to the
+ following conditions:
+ .
+ The above copyright notice and this permission notice shall
+ be included in all copies or substantial portions of the
+ Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT
+ WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+ INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR
+ PURPOSE AND NONINFRINGEMENT. IN NO EVENT
+ SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ CONNECTION WITH THE SOFTWARE OR THE USE OR
+ OTHER DEALINGS IN THE SOFTWARE.
 
-C-Pluff, a plug-in framework for C
-Copyright 2007 Johannes Lehtinen
- 
-Permission is hereby granted, free of charge, to any person obtaining a
-copy of this software and associated documentation files (the "Software"),
-to deal in the Software without restriction, including without limitation
-the rights to use, copy, modify, merge, publish, distribute, sublicense,
-and/or sell copies of the Software, and to permit persons to whom the
-Software is furnished to do so, subject to the following conditions:
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; version 2 dated June, 1991, or (at
+ your option) any later version.
+ .
+ On Debian systems, the complete text of version 2 of the GNU General
+ Public License can be found in '/usr/share/common-licenses/GPL-2'.
 
-The above copyright notice and this permission notice shall be included
-in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-KazLib copyright and license
-----------------------------
-
-Hash Table Data Type
-List Abstract Data Type
-Copyright (C) 1997 Kaz Kylheku <kaz@ashi.footprints.net>
-
-Free Software License:
-
-All rights are reserved by the author, with the following exceptions:
-Permission is granted to freely reproduce and distribute this software,
-possibly in exchange for a fee, provided that this copyright notice appears
-intact. Permission is also granted to adapt this software to produce
-derivative works, as long as the modified versions carry this copyright
-notice and additional notices stating that the work has been modified.
-This source code may be translated into executable form and incorporated
-into proprietary software; there is no requirement for such software to
-contain a copyright notice related to this source.
+License: Kazlib-Free-Software
+ Free Software License:
+ .
+ All rights are reserved by the author, with the following exceptions:
+ Permission is granted to freely reproduce and distribute this software,
+ possibly in exchange for a fee, provided that this copyright notice appears
+ intact. Permission is also granted to adapt this software to produce
+ derivative works, as long as the modified versions carry this copyright
+ notice and additional notices stating that the work has been modified.
+ This source code may be translated into executable form and incorporated
+ into proprietary software; there is no requirement for such software to
+ contain a copyright notice related to this source.
