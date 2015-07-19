@@ -6,6 +6,8 @@ Uploaders: Balint Reczey <balint@balintreczey.hu>
 Standards-Version: 3.9.6
 Build-Depends: debhelper (>= 9), libexpat1-dev, libreadline6-dev,
                dh-autoreconf
+Vcs-Git: git://git.debian.org/git/collab-maint/cpluff.git
+Vcs-Browser: http://git.debian.org/?p=collab-maint/cpluff.git;a=summary
 
 Package: libcpluff0
 Section: libs
