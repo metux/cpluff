@@ -1,6 +1,17 @@
 cpluff (0.1.3-3) UNRELEASED; urgency=medium
 
-  *
+  * Add myself as uploader
+  * Bump libreadline dependency
+  * Migrate to modern Debhelper
+  * Fix tests
+  * Use multiarch
+  * Build-depend on dh-autoreconf
+  * Bump standards version
+  * Modernize variable substitution in debian/control
+  * Use symbols instead of shlibs file to track library changes
+  * Convert copyright file to machine-readable format
+  * List packaging repository in debian/control
+  * Upload to Debian (Closes: #792900)
 
  -- Balint Reczey <balint@balintreczey.hu>  Wed, 29 Apr 2015 08:27:24 +0200
 
