@@ -45,6 +45,7 @@ AC_SUBST([CP_CXX_LIB_VERSION])
 # Automake initialization
 # -----------------------
 AM_INIT_AUTOMAKE([foreign])
+m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 AM_GNU_GETTEXT([external])
 AM_GNU_GETTEXT_VERSION([0.16.1])
 
@@ -106,15 +107,15 @@ if test "$enable_threads" != no; then
     ( test -z "$enable_threads" || test "$enable_threads" = Posix ); then
     AC_MSG_CHECKING([for Posix threads])
     AC_LINK_IFELSE(
-[#include <pthread.h>
+[AC_LANG_SOURCE([#include <pthread.h>
 
-int main(int argc, char *argv[]) {
+int main(int argc, char **argv) {
 	pthread_mutex_t mutex;
 	
 	pthread_mutex_init(&mutex, NULL);
 	return 0;
 }
-], [AC_MSG_RESULT([yes])
+])], [AC_MSG_RESULT([yes])
 cp_threads=Posix], AC_MSG_RESULT([no]))
   fi
   
@@ -123,13 +124,13 @@ cp_threads=Posix], AC_MSG_RESULT([no]))
     ( test -z "$enable_threads" || test "$enable_threads" = Windows ); then
     AC_MSG_CHECKING([for Windows threads])
     AC_LINK_IFELSE(
-[#include <windows.h>
+[AC_LANG_SOURCE([#include <windows.h>
 
-int main(int argc, char *argv[]) {
+int main(int argc, char **argv) {
   CreateMutex(NULL, FALSE, NULL);
   return 0;
 }
-], [AC_MSG_RESULT([yes])
+])], [AC_MSG_RESULT([yes])
 cp_threads=Windows], AC_MSG_RESULT([no]))
   fi
   
@@ -165,7 +166,8 @@ dlmechanism=none
 if test "$with_dlopen" != no && test "$with_libltdl" != yes; then
   AC_CHECK_HEADER([dlfcn.h],
     AC_CHECK_LIB([dl], [dlopen],
-      [LIBS_LIBCPLUFF="-ldl $LIBS_LIBCPLUFF"; dlmechanism=dlopen]))
+      [LIBS_LIBCPLUFF="-ldl $LIBS_LIBCPLUFF"; dlmechanism=dlopen],
+	AC_CHECK_LIB([c], [dlopen], [dlmechanism=dlopen])))
 fi
 if test "$dlmechanism" = none && test "$with_libltdl" != no && test "$with_dlopen" != yes; then  
   AC_CHECK_HEADER([ltdl.h],
